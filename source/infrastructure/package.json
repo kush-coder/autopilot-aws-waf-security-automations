@@ -1,0 +1,52 @@
+{
+  "name": "@amzn/aws-waf-security-automations",
+  "version": "4.1.7",
+  "bin": {
+    "infrastructure": "bin/aws-waf-security-automations.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "NODE_OPTIONS='--max-old-space-size=4096' jest --coverage --maxWorkers=50% --workerIdleMemoryLimit=2GB",
+    "pretest": "npm ci",
+    "cdk": "cdk",
+    "clean": "rm -rf node_modules",
+    "lint": "npx eslint lib",
+    "prettier": "npx prettier --check 'lib/**/*.ts'",
+    "prettierFix": "npx prettier --write 'lib/**/*.ts'"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "22.7.9",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "aws-cdk": "2.1117.0",
+    "eslint": "^8.57.1",
+    "globals": "^15.15.0",
+    "jest": "^30.0.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "prettier": "3.4.2",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.273.0",
+    "constructs": "^10.4.2"
+  },
+  "overrides": {
+    "minimatch@3.x": "^3.1.5",
+    "brace-expansion@5.x": "^5.0.12"
+  },
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "Security Automations for AWS WAF",
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/solutions"
+  },
+  "jestSonar": {
+    "reportPath": "coverage"
+  }
+}
